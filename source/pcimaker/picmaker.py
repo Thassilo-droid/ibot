@@ -13,14 +13,17 @@ n = 3
 
 image = Image.open(os.getcwd()+"/" + str(n) + ".jpg")
 
-image.thumbnail(size,Image.ANTIALIAS)
+W, H = image.size
+msg = "motivierender Spruch"
+#image.thumbnail(size,Image.ANTIALIAS)
 
 image = image.convert(mode='L')
 image = image.filter(ImageFilter.GaussianBlur(20))
 
 image = image.convert('RGB')
 
-font_type = ImageFont.truetype('StayWriter-Handmade.ttf',50)
+font_type = ImageFont.truetype('Garet-Heavy.ttf',50)
+
 draw = ImageDraw.Draw(image)
 
 quote = RandomQuoteGenerator.load_quote("quotes.csv")
