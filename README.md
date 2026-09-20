@@ -1,2 +1,3 @@
 # ibot
-instabot was used
+
+ibot was a bot for instagram (automatic post generation)
